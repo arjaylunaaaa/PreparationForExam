@@ -4,16 +4,16 @@ import java.util.Scanner;
 
 public class Binary {
 
-    static Scanner sc = new Scanner(System.in);
-
     public static void main(String[] args) {
-
+        
         input();
         
     }
     
     // This is only for clean and short code for the main.
     private static void input() {
+        
+        Scanner sc = new Scanner(System.in);
         boolean isRunning = true;
 
         while (isRunning) {
