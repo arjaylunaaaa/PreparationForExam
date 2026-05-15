@@ -9,7 +9,15 @@ public class Hexadecimal extends Decimal {
         int step = 1;
 
         for (int i = hexadecimal.length() - 1; i >= 0; i--) {
-            int digit = (hexadecimal.charAt(i) - 'A') + 10;
+
+            int digit;
+
+            if (hexadecimal.matches("[0-9]+")) {
+                digit = hexadecimal.charAt(i) - '0';
+            } else {
+                digit = (hexadecimal.charAt(i) - 'A') + 10;
+            }
+
             int value = digit * (int) Math.pow(16, power);
             int total = value;
             System.out.printf("Step %d: %d * 16 ^ %d = %d%n",
@@ -29,7 +37,7 @@ public class Hexadecimal extends Decimal {
 
         int decimal = hexadecimalToDecimal(hexadecimal);
 
-        String result = decimalToHexadecimal(decimal);
+        String result = decimalToBinary(decimal);
 
         return result;
     }
