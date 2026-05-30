@@ -2,8 +2,6 @@ package com.mycompany.practice;
 
 public class Binary extends Decimal {
 
-    public static Decimal decimal = new Decimal();
-
     public static int binaryToDecimal(String binary) {
 
         int decimal = 0;
